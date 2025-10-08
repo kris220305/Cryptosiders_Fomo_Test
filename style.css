@@ -1,0 +1,127 @@
+/* ====== Theme ====== */
+:root{
+  --brand:#8A2BE2;      /* Medium Purple */
+  --brand-2:#5D3FD3;    /* Darker Purple */
+  --bg:#F2F0F7;         /* Very light purple */
+  --ink:#333333;
+  --muted:#666666;
+  --white:#ffffff;
+  --card:#FFFFFF;
+  --lav:#E6E6FA;        /* lavender border */
+  --shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+*{box-sizing:border-box}
+html,body{scroll-behavior:smooth}
+
+body{
+  font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin:0; color:var(--ink); background:var(--bg);
+}
+
+/* ====== Containers ====== */
+.container{max-width:1200px; margin:0 auto; padding:0 24px;}
+.container.narrow{max-width:850px}
+.card{background:var(--card); border-radius:16px; box-shadow:var(--shadow); padding:24px}
+
+/* ====== Header / Nav ====== */
+#header{position:fixed; top:0; left:0; width:100%; z-index:99}
+.header.container{background:transparent; transition:background-color .3s ease}
+.nav-bar{display:flex; align-items:center; justify-content:space-between; height:64px}
+
+.brand h1{margin:0; font-size:24px; font-weight:700; letter-spacing:.5px}
+.brand h1 span{color:var(--brand)}
+
+.nav-list ul{list-style:none; display:flex; gap:24px; margin:0; padding:0}
+.nav-list a{color:var(--ink); text-decoration:none; font-weight:600; position:relative}
+.nav-list a::after{
+  content:attr(data-after); position:absolute; left:0; bottom:-8px; width:0; height:3px;
+  background:var(--brand); transition:width .3s ease
+}
+.nav-list a:hover::after{width:100%}
+
+/* Hamburger (mobile) */
+.hamburger{display:none; width:24px; height:24px; cursor:pointer; align-items:center}
+.hamburger .bar{width:100%; height:3px; background:var(--ink); position:relative}
+.hamburger .bar::before, .hamburger .bar::after{
+  content:""; position:absolute; left:0; width:100%; height:3px; background:var(--ink);
+}
+.hamburger .bar::before{top:-7px} .hamburger .bar::after{top:7px}
+
+/* ====== Hero ====== */
+#hero{min-height:88vh; display:flex; align-items:center; justify-content:center;
+  background: radial-gradient(1200px 600px at 50% -10%, #ffffff 0%, #f7f5fc 50%, #efeafc 100%);
+  padding-top:64px;
+}
+.hero.container{display:flex; align-items:center; justify-content:center; text-align:center}
+#hero h1{font-size:42px; margin:0 0 12px 0}
+#hero h1 span{color:var(--brand)}
+.hero-subtitle{color:var(--muted); margin:0 0 24px 0}
+
+.cta{
+  display:inline-block; padding:12px 20px; border-radius:12px;
+  border:2px solid var(--brand); color:var(--brand); text-decoration:none; font-weight:700;
+  transition:all .25s ease;
+}
+.cta:hover{background:var(--brand); color:var(--white)}
+.cta.wide{width:100%; text-align:center; padding:14px 20px; font-size:18px}
+
+/* ====== Sections ====== */
+section{padding:72px 0}
+.section-head{text-align:center; margin-bottom:16px; border-bottom:2px solid var(--lav); padding-bottom:16px}
+.section-title{font-size:32px; margin:0 0 8px 0}
+.section-title span{color:var(--brand)}
+.section-subtitle{color:var(--muted); margin:0}
+
+/* ====== Questionnaire Styles (from reference) ====== */
+.instructions{margin:16px 0 24px 0; background:#F9F7FD; padding:20px; border-radius:12px; border-left:5px solid var(--brand)}
+.instructions h2{margin:0 0 8px 0; color:var(--brand-2)}
+.instructions ul{margin:0; padding-left:18px}
+
+.question-block{margin:22px 0}
+.question-text{font-size:1.05em; font-weight:600; margin:0 0 12px 0}
+
+.options-container{display:flex; gap:12px; align-items:center; justify-content:space-between; padding:6px 0}
+.scale-label{color:#666; font-size:.9em; width:140px}
+.radio-group{display:flex; gap:14px; justify-content:center; align-items:center}
+
+.radio-group label{display:flex; flex-direction:column; align-items:center; font-weight:600; cursor:pointer; gap:6px}
+.radio-group input[type="radio"]{
+  appearance:none; width:22px; height:22px; border:2px solid #D8BFD8; border-radius:50%; transition:.2s;
+}
+.radio-group input[type="radio"]:checked{
+  background-color:var(--brand); border-color:var(--brand);
+  box-shadow:0 0 0 3px #fff, 0 0 0 5px var(--brand);
+}
+.radio-group label:hover input[type="radio"]{border-color:var(--brand)}
+
+/* Result */
+.result-section{display:none; margin-top:24px; background:#F9F7FD; border-left:5px solid #1E90FF}
+.result-section h2{color:#1E90FF; margin-top:0}
+.score{font-size:2em; font-weight:700; color:var(--brand-2)}
+#fomo-level{font-size:1.5em; font-weight:700}
+#fomo-level.high{color:#DC143C}
+#fomo-level.low{color:#32CD32}
+#fomo-description{color:#555}
+
+/* ====== Footer ====== */
+#footer{background-image:linear-gradient(60deg, #1f1e1e 0%, var(--brand-2) 100%); color:#fff}
+.footer.container{display:flex; flex-direction:column; align-items:center; gap:8px}
+.footer .brand h1{color:#fff}
+.footer .brand h1 span{color:#fff}
+
+/* ====== Responsive ====== */
+@media (max-width: 900px){
+  .scale-label{width:110px}
+}
+@media (max-width: 720px){
+  .nav-list ul{
+    position:fixed; inset:64px 0 auto 0; background:#fff; padding:16px 24px;
+    flex-direction:column; gap:12px; box-shadow:var(--shadow); transform:translateY(-130%);
+    transition:transform .25s ease;
+  }
+  .nav-list ul.open{transform:translateY(0)}
+  .hamburger{display:flex}
+  .options-container{flex-direction:column; align-items:flex-start}
+  .scale-label{width:auto}
+}

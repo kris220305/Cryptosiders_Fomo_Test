@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cryptosiders — Cek Level FOMO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero"><h1>Crypto<span>siders</span></h1></a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger"><div class="bar"></div></div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#fomo" data-after="FOMO Test">FOMO Test</a></li>
+            <li><a href="#about" data-after="Tentang">Tentang</a></li>
+            <li><a href="#contact" data-after="Kontak">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Cek Level <span>FOMO</span> Anda</h1>
+        <p class="hero-subtitle">Kuesioner singkat untuk menilai kecenderungan FOMO saat berinvestasi crypto.</p>
+        <a href="#fomo" class="cta">Mulai Isi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOMO Questionnaire (from reference) -->
+  <section id="fomo">
+    <div class="container narrow">
+      <header class="section-head">
+        <h1 class="section-title">Form <span>FOMO</span></h1>
+        <p class="section-subtitle">Silakan pilih salah satu dari empat opsi pada setiap pertanyaan.</p>
+      </header>
+
+      <div class="instructions">
+        <h2>Petunjuk Pengisian</h2>
+        <ul>
+          <li><strong>STS:</strong> Sangat tidak sesuai, atau tidak pernah.</li>
+          <li><strong>TS:</strong> Tidak terlalu sesuai, atau kadang-kadang.</li>
+          <li><strong>SS:</strong> Cukup sesuai, atau lumayan sering.</li>
+          <li><strong>S:</strong> Sangat sesuai, atau sering sekali.</li>
+        </ul>
+      </div>
+
+      <form id="fomo-form" class="card">
+        <div class="question-block">
+          <p class="question-text">Saya merasa ketinggalan informasi tentang pasar crypto</p>
+          <div class="options-container">
+            <span class="scale-label">Sangat Tidak Sesuai</span>
+            <div class="radio-group">
+              <label>STS<input type="radio" name="q1" value="1"></label>
+              <label>TS<input type="radio" name="q1" value="2"></label>
+              <label>SS<input type="radio" name="q1" value="3"></label>
+              <label>S<input type="radio" name="q1" value="4"></label>
+            </div>
+            <span class="scale-label">Sangat Sesuai</span>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <p class="question-text">Saya merasa tertinggal dalam mengikuti pasar crypto dibandingkan dengan orang lain</p>
+          <div class="options-container">
+            <span class="scale-label">Sangat Tidak Sesuai</span>
+            <div class="radio-group">
+              <label>STS<input type="radio" name="q2" value="1"></label>
+              <label>TS<input type="radio" name="q2" value="2"></label>
+              <label>SS<input type="radio" name="q2" value="3"></label>
+              <label>S<input type="radio" name="q2" value="4"></label>
+            </div>
+            <span class="scale-label">Sangat Sesuai</span>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <p class="question-text">Saya khawatir melewatkan kejadian penting di pasar crypto</p>
+          <div class="options-container">
+            <span class="scale-label">Sangat Tidak Sesuai</span>
+            <div class="radio-group">
+              <label>STS<input type="radio" name="q3" value="1"></label>
+              <label>TS<input type="radio" name="q3" value="2"></label>
+              <label>SS<input type="radio" name="q3" value="3"></label>
+              <label>S<input type="radio" name="q3" value="4"></label>
+            </div>
+            <span class="scale-label">Sangat Sesuai</span>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <p class="question-text">Saya takut kehilangan peluang yang orang lain dapatkan di pasar crypto</p>
+          <div class="options-container">
+            <span class="scale-label">Sangat Tidak Sesuai</span>
+            <div class="radio-group">
+              <label>STS<input type="radio" name="q4" value="1"></label>
+              <label>TS<input type="radio" name="q4" value="2"></label>
+              <label>SS<input type="radio" name="q4" value="3"></label>
+              <label>S<input type="radio" name="q4" value="4"></label>
+            </div>
+            <span class="scale-label">Sangat Sesuai</span>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <p class="question-text">Saya merasa bersalah saat melewatkan peluang investasi di crypto</p>
+          <div class="options-container">
+            <span class="scale-label">Sangat Tidak Sesuai</span>
+            <div class="radio-group">
+              <label>STS<input type="radio" name="q5" value="1"></label>
+              <label>TS<input type="radio" name="q5" value="2"></label>
+              <label>SS<input type="radio" name="q5" value="3"></label>
+              <label>S<input type="radio" name="q5" value="4"></label>
+            </div>
+            <span class="scale-label">Sangat Sesuai</span>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <p class="question-text">Saya terus memikirkan peluang crypto yang sudah terlewat</p>
+          <div class="options-container">
+            <span class="scale-label">Sangat Tidak Sesuai</span>
+            <div class="radio-group">
+              <label>STS<input type="radio" name="q6" value="1"></label>
+              <label>TS<input type="radio" name="q6" value="2"></label>
+              <label>SS<input type="radio" name="q6" value="3"></label>
+              <label>S<input type="radio" name="q6" value="4"></label>
+            </div>
+            <span class="scale-label">Sangat Sesuai</span>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <p class="question-text">Saya merasa orang lain puas dengan peluang yang mereka dapatkan di pasar crypto</p>
+          <div class="options-container">
+            <span class="scale-label">Sangat Tidak Sesuai</span>
+            <div class="radio-group">
+              <label>STS<input type="radio" name="q7" value="1"></label>
+              <label>TS<input type="radio" name="q7" value="2"></label>
+              <label>SS<input type="radio" name="q7" value="3"></label>
+              <label>S<input type="radio" name="q7" value="4"></label>
+            </div>
+            <span class="scale-label">Sangat Sesuai</span>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <p class="question-text">Saya ingin bisa ikut memahami obrolan orang lain soal pasar crypto</p>
+          <div class="options-container">
+            <span class="scale-label">Sangat Tidak Sesuai</span>
+            <div class="radio-group">
+              <label>STS<input type="radio" name="q8" value="1"></label>
+              <label>TS<input type="radio" name="q8" value="2"></label>
+              <label>SS<input type="radio" name="q8" value="3"></label>
+              <label>S<input type="radio" name="q8" value="4"></label>
+            </div>
+            <span class="scale-label">Sangat Sesuai</span>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <p class="question-text">Saat sedang liburan, saya tetap memantau pasar crypto</p>
+          <div class="options-container">
+            <span class="scale-label">Sangat Tidak Sesuai</span>
+            <div class="radio-group">
+              <label>STS<input type="radio" name="q9" value="1"></label>
+              <label>TS<input type="radio" name="q9" value="2"></label>
+              <label>SS<input type="radio" name="q9" value="3"></label>
+              <label>S<input type="radio" name="q9" value="4"></label>
+            </div>
+            <span class="scale-label">Sangat Sesuai</span>
+          </div>
+        </div>
+
+        <button type="button" id="calculate-btn" class="cta wide">Lihat Hasil FOMO Saya</button>
+
+        <div id="result-container" class="result-section card">
+          <h2>Hasil Anda</h2>
+          <p>Skor Total Anda:</p>
+          <p id="score-value" class="score">0</p>
+          <p id="fomo-level"></p>
+          <p id="fomo-description"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container narrow">
+      <h1 class="section-title">Tentang <span>Aplikasi</span></h1>
+      <p>Alat sederhana ini membantu Anda menilai kecenderungan FOMO (Fear of Missing Out)
+      saat berinvestasi crypto. Hasilnya bukan diagnosis psikologis, namun panduan edukasi
+      agar keputusan investasi tetap rasional.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container narrow">
+      <h1 class="section-title">Kontak <span>Kami</span></h1>
+      <p>Butuh bantuan kustomisasi atau integrasi ke situs Anda? Hubungi kami di
+      <a href="mailto:hello@cryptosiders.app">hello@cryptosiders.app</a>.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand"><h1>Crypto<span>siders</span></h1></div>
+      <p>© 2025 Cryptosiders. All rights reserved.</p>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
